@@ -401,11 +401,11 @@ h2 {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Moves content higher */
+    justify-content: center; /* Centers everything */
     align-items: center;
     text-align: center;
     min-height: 100vh;
-    padding-top: 5vh; /* Adds space at the top */
+    padding-top: 0; /* Centers container properly */
   }
 
   input {
@@ -459,25 +459,34 @@ h2 {
   .container {
     padding: 25px;
     max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
+
   .mystery-text {
     font-size: 12px;
     letter-spacing: 1px;
   }
+
   h1 {
     font-size: 22px;
   }
+
   input {
     font-size: 14px;
     padding: 8px;
   }
+
   button {
     font-size: 13px;
     padding: 8px 16px;
   }
 
   .background-overlay {
-    background-size: contain;
+    background-size: cover;
     background-position: center;
   }
 
