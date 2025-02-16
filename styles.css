@@ -346,23 +346,22 @@ h2 {
 
 @media (min-width: 1440px) {
   .container {
-    padding: 25px;
-    max-width: 95%;
+    max-width: 40%;
+    padding: 60px;
   }
   .mystery-text {
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 18px;
   }
   h1 {
-    font-size: 22px;
+    font-size: 36px;
   }
   input {
-    font-size: 14px;
-    padding: 8px;
+    font-size: 22px;
+    padding: 16px;
   }
   button {
-    font-size: 13px;
-    padding: 8px 16px;
+    font-size: 20px;
+    padding: 16px 28px;
   }
   .background-overlay {
     background-position: center top;
@@ -460,23 +459,18 @@ h2 {
   .container {
     padding: 25px;
     max-width: 95%;
-    padding-top: 5vh;
   }
-
   .mystery-text {
     font-size: 12px;
     letter-spacing: 1px;
   }
-
   h1 {
     font-size: 22px;
   }
-
   input {
     font-size: 14px;
     padding: 8px;
   }
-
   button {
     font-size: 13px;
     padding: 8px 16px;
