@@ -414,74 +414,39 @@ h2 {
   }
 
   /* HERE */
+  #story {
+    padding: 15px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    text-align: left;
+    margin-top: 400px;
+  }
+
   #verse {
     font-size: 20px;
-    font-style: italic;
-    color: #f5f5f5;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    /* max-width: 600px; */
-    /* text-align: center; */
-    /* display: block; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
+    max-width: 95%;
+    text-align: center;
+    margin-top: 0; /* Ensures verse appears first */
   }
 
   h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 20px;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-size: 24px;
     text-align: center;
-  }
-
-  #story {
-    /* background: rgba(255, 255, 255, 0.05); */
-    padding: 25px;
-    border-radius: 12px;
-    /* border: 1px solid rgba(255, 255, 255, 0.2); */
-    /* backdrop-filter: blur(10px); */
-    /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 500px;
-    width: 70%;
-    text-align: left;
-    margin-top: 20px;
-  }
-
-  #story p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #dcdcdc;
-    margin-bottom: 15px;
-  }
-
-  #story ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  #story li {
-    font-size: 18px;
-    color: #f0f0f0;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
-  }
-
-  #story li::before {
-    content: '\2022';
-    color: #ffffff;
     font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
+    margin-top: 3vh;
   }
+
+  #story .text,
+  #story li {
+    font-size: 15px;
+  }
+
+  /* html,
+  body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+  /* width: 100%; */
+  /* } */
 }
 
 /* 
