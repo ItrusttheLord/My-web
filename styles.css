@@ -128,38 +128,58 @@ button:hover {
 }
 
 /*Here*/
-
 .background-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, 100%); /* Starts below the viewport */
   width: 100%;
   height: 100%;
   background: url('assets/image2.png') center/cover no-repeat;
-  opacity: 0.3;
+  opacity: 0.2; /* Reduced brightness for better text readability */
   z-index: -1;
-  animation: floatBackground 10s infinite alternate ease-in-out;
-}
-
-.background-overlay {
-  background-size: contain;
-  background-position: center;
+  animation: imageEnter 3s ease-in-out forwards,
+    floatBackground 11s infinite linear alternate,
+    flowEffect 8s infinite linear alternate;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
-}
-
-.background-overlay {
   background-repeat: no-repeat;
   background-blend-mode: normal;
-  filter: contrast(1.2) brightness(1.1);
+  filter: contrast(1.1) brightness(0.9);
+}
+
+@keyframes imageEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 100%); /* Starts from below */
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%); /* Ends centered */
+  }
 }
 
 @keyframes floatBackground {
-  from {
-    transform: translateY(0px);
+  0% {
+    transform: translate(-50%, -50%) translateY(5px);
   }
-  to {
-    transform: translateY(-10px);
+  50% {
+    transform: translate(-50%, -50%) translateY(-5px); /* Moves up smoothly */
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(5px); /* Moves back down smoothly */
+  }
+}
+
+@keyframes flowEffect {
+  0% {
+    filter: contrast(1.1) brightness(0.4)
+      drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
+  }
+
+  100% {
+    filter: contrast(1.1) brightness(0.4)
+      drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.2));
   }
 }
 
@@ -171,9 +191,11 @@ button:hover {
   position: relative;
   animation: fadeIn 2s ease-in-out forwards;
 }
+
 .hidden {
   display: none;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -183,7 +205,7 @@ button:hover {
   }
 }
 
-#verse {
+/* #verse {
   font-size: 20px;
   font-style: italic;
   color: #f5f5f5;
@@ -208,11 +230,11 @@ h2 {
 
 #story {
   /* background: rgba(255, 255, 255, 0.05); */
-  padding: 25px;
-  /* border-radius: 12px; */
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
-  /* backdrop-filter: blur(10px); */
-  /* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); */
+/* padding: 25px; */
+/* border-radius: 12px; */
+/* border: 1px solid rgba(255, 255, 255, 0.2); */
+/* backdrop-filter: blur(10px); */
+/* box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
   max-width: 700px;
   width: 90%;
   text-align: left;
@@ -220,8 +242,8 @@ h2 {
 }
 
 #story p {
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 18px; */
+/* line-height: 1.6;
   color: #dcdcdc;
   margin-bottom: 15px;
 }
@@ -246,6 +268,83 @@ h2 {
   position: absolute;
   left: 0;
   top: 0;
+} */
+#story {
+  padding: 25px;
+  max-width: 750px;
+  width: 90%;
+  text-align: center; /* Centering the text */
+  margin: 50px auto; /* Centering the container */
+}
+
+#verse {
+  font-size: 22px;
+  font-style: italic;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  max-width: 650px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#story .text {
+  font-size: 19px;
+  line-height: 1.7;
+  color: #dcdcdc;
+  margin-bottom: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#story ul {
+  list-style-type: none;
+  padding: 0;
+  /* text-align: left; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+#story li {
+  font-size: 19px;
+  color: #f0f0f0;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  /* display: inline-block; Align list items in the center */
+  max-width: 500px;
+  text-align: left;
+}
+
+#story li::before {
+  content: none;
+  /* content: '\2022'; */
+  /* color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  left: -18px;
+  top: 0; */
+}
+
+h2:last-of-type {
+  margin-top: 70px; /* Adds more space below main text */
 }
 
 /*Responsive web*/
@@ -410,8 +509,7 @@ h2 {
 
   .background-overlay {
     background-size: cover;
-    /* background-position: center; */
-    background-position: calc(-13vh);
+    background-position: center;
   }
 
   /* HERE */
@@ -419,28 +517,27 @@ h2 {
     padding: 15px;
     text-align: center;
     max-width: 600px;
-    width: 90%;
+    width: 95%;
     text-align: left;
     margin-top: 400px;
   }
 
-  #verse {
-    font-size: 20px;
-    max-width: 95%;
-    text-align: center;
-    margin-top: 0; /* Ensures verse appears first */
+  #story #verse {
+    font-size: 18px;
   }
 
-  h2 {
+  /* h2 {
     font-size: 24px;
     text-align: center;
     font-weight: bold;
     margin-top: 3vh;
-  }
+  } */
 
-  #story .text,
-  #story li {
+  #story .text {
     font-size: 15px;
+  }
+  #story li {
+    font-size: 14px;
   }
 
   html,
