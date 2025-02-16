@@ -466,9 +466,20 @@ h2:last-of-type {
     padding: 10px 10px;
   }
 
-  .background-overlay {
+  /* .background-overlay {
     background-size: cover;
     background-position: center;
+  } */
+
+  .background-overlay {
+    /* position: fixed; */
+    width: 108vw; /* Full width */
+    height: 100vh; /* Full height */
+    /* background-image: url('assets/image2.png'); Ensure correct path */
+    background-size: cover; /* Ensures full coverage */
+    background-position: center center;
+    /* background-repeat: no-repeat; */
+    /* z-index: -1; Keeps it behind text */
   }
 
   #story {
