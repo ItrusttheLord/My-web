@@ -472,14 +472,10 @@ h2:last-of-type {
   } */
 
   .background-overlay {
-    /* position: fixed; */
-    width: 108vw; /* Full width */
-    height: 100vh; /* Full height */
-    /* background-image: url('assets/image2.png'); Ensure correct path */
+    width: 112vw; /* Full width */
+    height: 90vh;
     background-size: cover; /* Ensures full coverage */
     background-position: center center;
-    /* background-repeat: no-repeat; */
-    /* z-index: -1; Keeps it behind text */
   }
 
   #story {
@@ -559,7 +555,9 @@ h2:last-of-type {
   }
 
   .background-overlay {
-    background-size: cover;
-    background-position: center;
+    width: 120vw; /* Full width */
+    height: 90vh;
+    background-size: cover; /* Ensures full coverage */
+    background-position: center center;
   }
 }
