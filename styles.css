@@ -281,31 +281,9 @@ h2 {
     padding: 10px 18px;
   }
 
-  /* Here */
-  #content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ensures verse and Thank You appear first */
-    align-items: center;
-    height: auto; /* Allow scrolling but keeps content visible */
-    overflow: hidden;
-    padding-top: 5vh; /* Reduces space above for better positioning */
-  }
-
-  #verse,
-  h2 {
-    order: -1; /* Moves them to appear first */
-  }
-
   .background-overlay {
-    background-size: contain; /* Ensures full visibility */
-    background-position: center center; /* Properly centers the image */
-    background-attachment: fixed; /* Keeps the image still while scrolling */
+    background-size: cover;
   }
-
-  /* .background-overlay { */
-  /* background-size: cover; */
-  /* } */
 
   #story {
     max-width: 90%;
@@ -325,11 +303,6 @@ h2 {
 }
 
 @media (max-width: 480px) {
-  html,
-  body {
-    overflow-x: hidden; /* Prevents accidental horizontal scrolling */
-    min-height: 100vh; /* Ensures full height coverage */
-  }
   .container {
     padding: 25px;
     max-width: 95%;
