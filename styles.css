@@ -346,22 +346,23 @@ h2 {
 
 @media (min-width: 1440px) {
   .container {
-    max-width: 40%;
-    padding: 60px;
+    padding: 25px;
+    max-width: 95%;
   }
   .mystery-text {
-    font-size: 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
   }
   h1 {
-    font-size: 36px;
+    font-size: 22px;
   }
   input {
-    font-size: 22px;
-    padding: 16px;
+    font-size: 14px;
+    padding: 8px;
   }
   button {
-    font-size: 20px;
-    padding: 16px 28px;
+    font-size: 13px;
+    padding: 8px 16px;
   }
   .background-overlay {
     background-position: center top;
